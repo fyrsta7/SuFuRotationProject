@@ -16,6 +16,14 @@ tail = \xs: List.
     cons {h, t} -> t
   end;
 
+length = fix (
+  \f: List -> Int. \xs: List.
+  match xs with
+    single _ -> 1
+  | cons {h, t} -> + 1 (f t)
+  end
+);
+
 list_eq = fix (
   \f: List -> List -> Bool. \xs: List. \ys: List.
   match {xs, ys} with
@@ -39,5 +47,7 @@ list_lt = fix (
   end
 );
 
-main = \inp: Input. 0
-  /* TODO */;
+main = \inp: Input.
+  if == (length inp.1) (length inp.2) then   /*Filter out invalid inputs*/
+    /* TODO */
+  else 0;
