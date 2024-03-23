@@ -66,6 +66,10 @@ Inductive SnocList = lin Unit | snoc {SnocList, Int};
 
 ### Task 6
 
-最后，让我们尝试一道竞赛真题。`building-block.pdf` 中展示的是 NOIP2013 提高组的一道真题，`building-black.f` 中是对应的穷举程序。
+最后，让我们尝试一道竞赛真题。`building-block.pdf` 中展示的是 NOIP2013 提高组的一道真题，`building-block.f` 中是对应的穷举程序。
 
-**Q6.1**: 请根据之前 5 个任务的经验，尝试使用 SuFu 将其优化为一个线性时间的程序。
+请根据前 5 个任务的经验，回答如下两个问题。
+
+**Q6.1**: 简单简要阅读穷举程序 `building-block.f`，并在上手优化前回答：是否有可能通过消除该程序中原有的中间数据结构，将其优化成为一个线性时间的程序。
+
+**Q6.2**: 尝试使用 SuFu 将穷举程序优化成为线性时间的高效程序。
