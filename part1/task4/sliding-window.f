@@ -78,6 +78,4 @@ positive = fix (
   end
 );
 
-main = ref positive;
-
-xs = cons {1, cons {0, cons {1, cons {1, cons {0, cons {1, cons {2, cons {3, nil unit}}}}}}}};
+main = sliding_window positive;

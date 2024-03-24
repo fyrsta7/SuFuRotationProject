@@ -110,9 +110,13 @@ sliding_window函数本质是以滑动窗口这个算法的形式遍历了List�
 
 ### Task 6
 
-最后，让我们尝试一道竞赛真题。`building-block.pdf` 中展示的是 NOIP2013 提高组的一道真题，`building-black.f` 中是对应的穷举程序。
+最后，让我们尝试一道竞赛真题。`building-block.pdf` 中展示的是 NOIP2013 提高组的一道真题，`building-block.f` 中是对应的穷举程序。
 
-**Q6.1**: 请根据之前 5 个任务的经验，尝试使用 SuFu 将其优化为一个线性时间的程序。
+**Q6.1**: 简单简要阅读穷举程序 `building-block.f`，并在上手优化前回答：是否有可能通过消除该程序中原有的中间数据结构，将其优化成为一个线性时间的程序。
+
+**Q6.2**: 尝试使用 SuFu 将穷举程序优化成为线性时间的高效程序。
+
+**Q6.1-old**: 请根据之前 5 个任务的经验，尝试使用 SuFu 将其优化为一个线性时间的程序。
 1. 只给 Inductive NList 里的 List 标上，不行，RuntimeError
 2. operation 的输出标上，RuntimeError
 3. remove_prefix 和 operation 的输出标上，不行，RuntimeError
@@ -132,3 +136,6 @@ sliding_window函数本质是以滑动窗口这个算法的形式遍历了List�
 3. 如何丢掉更多的部分解？例如背包/lis问题，优化结果是把所有Plan列出来，然后再计算结果，虽然Plan的表示本身压缩了，但Plan的数量并未减少，依然是指数大小。但是如果用动态规划，可以变成二次大小？
 确实没有压缩成动态规划
 4. 这里的问题是，如果不给single_pass传入一个函数，就不可能直接把run函数给优化掉？
+请根据前 5 个任务的经验，回答如下两个问题。
+
+
